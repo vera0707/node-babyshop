@@ -33,8 +33,33 @@
      </div>
   </div>
   <script type="text/javascript">
+     if("{{session.userid}}"){
+          var data={
+                    uid:"{{session.userid}}",
+                    gid:"001",
+                    title:"{{getGoods.data.title}}",
+                    price:"{{getGoods.data.price}}",
+                    num:1
+                  };
+          function cart(){
+                    $.ajax({
+                        type:"post",
+                        url:"./addcart",
+                        dataType:"json",
+                        data:data,
+                        success:function(data) {
+                          console.log(data);
 
-
+                        },
+                        error:function(msg) {
+                            console.log(msg);
+                        }
+                    });
+          }
+         $("#gotocart").click(cart);
+        }else{
+          window.location.href="/login"
+        }
   </script>
 </body>
 </html>
