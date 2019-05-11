@@ -1,0 +1,20 @@
+{
+ "status":0,
+ "data":[
+  {
+  	"title":"宝宝服饰",
+  	"bigpic":"/static/img/img12.jpg",
+    "littlepic":["/static/img/s_img7.jpg","/static/img/s_img8.jpg","/static/img/s_img9.jpg","/static/img/s_img10.jpg","/static/img/s_img11.jpg"]
+  },
+  {
+  	"title":"奶粉辅食",
+  	"bigpic":"/static/img/img12.jpg",
+    "littlepic":["/static/img/s_img7.jpg","/static/img/s_img8.jpg","/static/img/s_img9.jpg","/static/img/s_img10.jpg","/static/img/s_img11.jpg"]
+  },
+  {
+  	"title":"宝宝用品",
+  	"bigpic":"/static/img/img12.jpg",
+    "littlepic":["/static/img/s_img7.jpg","/static/img/s_img8.jpg","/static/img/s_img9.jpg","/static/img/s_img10.jpg","/static/img/s_img11.jpg"]
+  }   
+ ]
+}
