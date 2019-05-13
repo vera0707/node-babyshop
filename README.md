@@ -19,7 +19,7 @@
             cookie+session 登录数据保存
             mongodb 本地数据存储
             nginx 负载均衡
-            redis 数据缓存
+            redis 首页数据缓存
 
 
     serverProvider

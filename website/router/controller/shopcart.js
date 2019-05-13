@@ -1,6 +1,15 @@
+const shopCartModel = require('../../model/shopCartModel');
 
 function shopcart(req,res) {
-    res.render('./shopcart.art');
+  const session = req.session;
+  if(session){
+	shopCartModel(req.session.userid).then(data=>{
+	  data.session = session;
+	  res.render('./shopcart.art',data);
+	});
+  }else{
+      res.redirect('./login');
+  }
 }
 
 module.exports = shopcart;

@@ -70,8 +70,20 @@
       </div>
       <div class="OrderList">
         <div class="order-content" id="list-cont">
- 
-          <ul class="item-content layui-clear" data-id={{$value._id}}>
+
+
+             {{each getAllclassify.data}}
+                          <li class="nav-item">
+                            <div class="title">{{$value.className}}</div>
+                            <p>{{each $value.classdetail}}<a href="#">{{$value}}</a>{{/each}}</p>
+                            <i class="layui-icon layui-icon-right"></i>
+                          </li>
+                          {{/each}}
+
+          {{each shopCart}}
+            1111 - {{$value}}
+          {{/each}}
+          <ul class="item-content layui-clear" data-id={{$value._id}} >
             <li class="th th-chk">
               <div class="select-all">
                 <div class="cart-checkbox">

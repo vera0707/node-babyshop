@@ -71,7 +71,8 @@
       <div class="OrderList">
         <div class="order-content" id="list-cont">
 
-          <ul class="item-content layui-clear" data-id="3">
+          {{each shopCart}}
+          <ul class="item-content layui-clear" data-id="{{$value._id}}">
             <li class="th th-chk">
               <div class="select-all">
                 <div class="cart-checkbox">
@@ -81,9 +82,9 @@
             </li>
             <li class="th th-item">
               <div class="item-cont">
-                <a href="javascript:;"><img src="/static/img/paging_img1.jpg" alt=""></a>
+                <a href="javascript:;"><img src="{{$value.image}}" alt=""></a>
                 <div class="text">
-                  <div class="title"> </div>
+                  <div class="title">{{$value.title}}</div>
 
                 </div>
               </div>
@@ -94,17 +95,18 @@
             <li class="th th-amount">
               <div class="box-btn layui-clear">
                 <div class="less layui-btn">-</div>
-                <input class="Quantity-input" type="" name="" value="11" disabled="disabled">
+                <input class="Quantity-input" type="" name="" value="{{$value.num}}" disabled="disabled">
                 <div class="add layui-btn">+</div>
               </div>
             </li>
             <li class="th th-sum">
-              <span class="sum"> </span>
+              <span class="sum">{{$value.num}}</span>
             </li>
             <li class="th th-op">
               <span class="dele-btn">删除</span>
             </li>
           </ul>
+        {{/each}}
 
         </div>
       </div>

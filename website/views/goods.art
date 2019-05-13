@@ -21,14 +21,13 @@
        <div class='info-content'>
          <h2>{{getGoods.data.title}}</h2>
          <p class='color-red'>¥ {{getGoods.data.price}}</p>
-         <div class='num-choose'><span>-</span><input type="" name="" /><span>+</span></div>
+         <div class='num-choose'><span>-</span><input type="" name="" value="1" /><span>+</span></div>
          <div class="buy-button">
            <button>立即购买</button>
             <button id='gotocart'>加入购物车</button>
          </div>
        </div>
        <div class=''>
-
        </div>
      </div>
   </div>
@@ -36,9 +35,10 @@
      if("{{session.userid}}"){
           var data={
                     uid:"{{session.userid}}",
-                    gid:"001",
+                    gid:"{{getGoods.data.gid}}",
                     title:"{{getGoods.data.title}}",
                     price:"{{getGoods.data.price}}",
+                    image:"{{getGoods.data.imgrc}}",
                     num:1
                   };
           function cart(){
@@ -48,8 +48,7 @@
                         dataType:"json",
                         data:data,
                         success:function(data) {
-                          console.log(data);
-
+                          alert(data.msg);
                         },
                         error:function(msg) {
                             console.log(msg);

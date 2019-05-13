@@ -90,6 +90,7 @@ var car = {
                       data:{id:id},
                       success:function(data) {
                        that.parentNode.removeChild(that);
+                       location.reload();
                       },
                       error:function(msg) {
                           console.log(msg);

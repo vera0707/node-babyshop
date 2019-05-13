@@ -6,6 +6,8 @@ const login = require('./controller/login');
 const loginCheck = require('./controller/logincheck');
 const loginout = require('./controller/loginout');
 const shopcart = require('./controller/shopcart');
+const addcart = require('./controller/addcart');
+const deletecart = require('./controller/deletecart');
 
 const router = express.Router();
 router.get('/',index);
@@ -16,7 +18,9 @@ router.post('/logincheck',loginCheck);
 router.get('/loginout',loginout);
 
 
+router.post('/addcart',addcart);
 router.get('/shopcart',shopcart);
+router.post('/deletecart',deletecart);
 
 
 
