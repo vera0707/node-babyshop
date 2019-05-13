@@ -3,7 +3,6 @@
 target
 .settings
 .DS_Store
-.DS_Store
 *.svn*
 .svn
 *.iml
@@ -21,7 +20,6 @@ node_modules
 .build
 .minify
 .compile
-.build
 longdai-p2p.ipr
 longdai-p2p.iws
 
@@ -35,13 +33,13 @@ longdai-p2p.iws
 /bower_components
 
 /assets
-/.sass-cache
-./npm-debug.log
+website/viewTemplate/*
+website/database/*
+
 
 
 /longdai-service/src/main/resources/generatorConfig.xml
 package-lock.json
-yarn.lock
 yarn.lock
 npm-debug.log*
 
