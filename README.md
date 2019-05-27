@@ -1,3 +1,38 @@
+# WELCOME. IT IS BABYSHOP
+
+**这是一个小型简短的「node全栈练习项目」**
+
+BABYSHOP是一个node中间层项目，实现了用户登录、商品收藏等功能。该项目仅做全栈练习项目，虽项目较小，但包括了项目构建、数据库连接、项目优化等，为实现真正的全栈打好了初期基础。
+
+**目录介绍**
+- redisCache
+	+  redis数据缓存
+- serverProvider
+	+  后台服务
+- website
+	+  主项目
+
+每层项目下有完整的使用方法和配置说明，此页仅作概述。
+
+**主要技术**
+- express框架
+- redis缓存
+- mongoodb数据存储
+- cookie客户端登录
+- nginx负载均衡
+- art模板渲染
+- 数据缓存
+
+
+
+
+
+
+
+
+
+
+
 简介：该项目主要利用node做中间键，搭建一个婴儿商城项目。
 
 
@@ -26,35 +61,5 @@
            ① 模拟后台服务，提供后台数据
            ② node+express搭建
            ③ 非项目重点仅作服务提供
-
-
-
-
-
-    项目启动
-        服务端启动  node serverProvider/server.js
-        客户端启动  node website/app.js
-        mongodb启动
-            ① mongodb安装 -- 略
-            ② 指定数据库文件地址
-                mongod --dbpath 你的文件地址/babyShop/website/database
-
-               * 默认端口27017 若有端口冲突，请杀掉其他进程或修改端口(--port 端口号)
-
-            ③ 设置数据库用户名
-                1. 新开启命令窗口 输入 mongo 进入数据库
-                2. 输入 use admin 切换指admin 数据库
-                3. 输入 db.createUser({ user: 'admin',pwd: '123456',roles:['root'] })
-                    用户名 admin
-                    密码 123456
-                    权限 root
-
-                4. 检验用户设置是否成功
-                    db.auth('admin','123456')
-                    返回1代表成功
-                5. 设定数据库仅允许登录后访问
-                    1.断开数据库
-                    2.连接数据库时加参数 --ahth
-                      即 mongod --dbpath 你的文件地址/babyShop/website/database --auth
 
 

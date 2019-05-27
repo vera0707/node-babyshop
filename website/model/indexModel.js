@@ -1,48 +1,34 @@
-const request = require('request');
+const client = require('../redisConfig');
 
 async function index(){
     const getAllclassify = await new Promise((resolve)=>{
-        request.get('http://localhost:3000/getAllclassify',(err,res,body)=>{
-           if(!err && res.statusCode == 200){
-               const data = JSON.parse(body);
-               resolve(data);
-           }
+
+        client.hset('babytest','getAllclassify',(err,value)=>{
+            resolve(JSON.parse(value));
         });
     });
 
     const getIndexpic = await new Promise((resolve)=>{
-        request.get('http://localhost:3000/getIndexpic',(err,res,body)=>{
-            if(!err && res.statusCode == 200){
-                const data = JSON.parse(body);
-                resolve(data);
-            }
+        client.hset('babytest','getIndexpic',(err,value)=>{
+            resolve(JSON.parse(value));
         });
     });
 
     const getMore = await new Promise((resolve)=>{
-        request.get('http://localhost:3000/getMore',(err,res,body)=>{
-            if(!err && res.statusCode == 200){
-                const data = JSON.parse(body);
-                resolve(data);
-            }
+        client.hset('babytest','getMore',(err,value)=>{
+            resolve(JSON.parse(value));
         });
     });
 
     const getHot = await new Promise((resolve)=>{
-        request.get('http://localhost:3000/getHot',(err,res,body)=>{
-            if(!err && res.statusCode == 200){
-                const data = JSON.parse(body);
-                resolve(data);
-            }
+        client.hset('babytest','getHot',(err,value)=>{
+            resolve(JSON.parse(value));
         });
     });
 
     const getFloor = await new Promise((resolve)=>{
-        request.get('http://localhost:3000/getFloor',(err,res,body)=>{
-            if(!err && res.statusCode == 200){
-                const data = JSON.parse(body);
-                resolve(data);
-            }
+        client.hset('babytest','getFloor',(err,value)=>{
+            resolve(JSON.parse(value));
         });
     });
 

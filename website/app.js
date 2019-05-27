@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const port = 3500;
 
+global._pagecache = {};   // 设置页面缓存
 
 const app = express();
 app.use(cookieParser());
